@@ -28,7 +28,7 @@ TEMPLATE = """
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>TaskFlows</title>
+  <title>HELLO THERE</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: Arial, sans-serif; background: #f0f2f5; padding: 32px 16px; color: #222; }
@@ -205,4 +205,7 @@ if __name__ == "__main__":
     print("    repository.py — all data storage")
     print("    models.py     — Task class + TaskFactory")
     print("    strategies_and_observers.py — patterns\n")
-    app.run(host="0.0.0.0", port=5000, debug=True)
+   
+import os
+
+app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)), debug=False))
